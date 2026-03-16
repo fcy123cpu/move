@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百年党史数据可视化平台</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>百年党史数据可视化平台</h1>
+            <p>中国共产党百年奋斗历程 · 四个历史时期 · 重大成就</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="top-row">
+                <section class="chart-card timeline">
+                    <h2>📜 党史时间轴</h2>
+                    <div id="timeline-chart"></div>
+                </section>
+                <section class="chart-card periods">
+                    <h2>📊 时期分布</h2>
+                    <div id="events-chart"></div>
+                </section>
+            </div>
+            
+            <div class="middle-row">
+                <section class="chart-card achievements">
+                    <h2>🎯 建设成就</h2>
+                    <div id="achievements-chart"></div>
+                </section>
+                <section class="chart-card wordcloud">
+                    <h2>☁️ 关键词云</h2>
+                    <div id="wordcloud-chart"></div>
+                </section>
+            </div>
+            
+            <div class="bottom-row">
+                <section class="chart-card development">
+                    <h2>📈 发展历程</h2>
+                    <div id="development-chart"></div>
+                </section>
+                <section class="periods-overview">
+                    <h2>🏛️ 四个历史时期</h2>
+                    <div class="periods-grid">
+                        <div class="period-card period-1">
+                            <h3>新民主主义革命时期</h3>
+                            <p class="date-range">1921-1949</p>
+                            <p class="stats">核心事件: 30+件</p>
+                            <p class="stats">党员规模: 448.8万人</p>
+                            <p class="core-task">完成新民主主义革命，建立中华人民共和国</p>
+                        </div>
+                        <div class="period-card period-2">
+                            <h3>社会主义革命和建设时期</h3>
+                            <p class="date-range">1949-1978</p>
+                            <p class="stats">核心事件: 25+件</p>
+                            <p class="stats">党员规模: 3698.1万人</p>
+                            <p class="core-task">完成社会主义革命，确立社会主义基本制度</p>
+                        </div>
+                        <div class="period-card period-3">
+                            <h3>改革开放新时期</h3>
+                            <p class="date-range">1978-2012</p>
+                            <p class="stats">核心事件: 40+件</p>
+                            <p class="stats">党员规模: 8512.7万人</p>
+                            <p class="core-task">开创中国特色社会主义，实现人民生活历史性跨越</p>
+                        </div>
+                        <div class="period-card period-4">
+                            <h3>中国特色社会主义新时代</h3>
+                            <p class="date-range">2012-至今</p>
+                            <p class="stats">核心事件: 50+件</p>
+                            <p class="stats">党员规模: 9800万人</p>
+                            <p class="core-task">全面建成小康社会，实现第一个百年奋斗目标</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2026 百年党史数据可视化平台 | 数据来源：中共中央党史和文献研究院| @智能科技学院学班制</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
